@@ -1,0 +1,17 @@
+{
+  "browsers": [
+    "and_chr 94",
+    "android 94",
+    "chrome 94",
+    "edge 94",
+    "edge 93",
+    "firefox 93",
+    "firefox 92",
+    "ios_saf 15",
+    "ios_saf 14.5-14.8",
+    "ios_saf 14.0-14.4",
+    "safari 15",
+    "safari 14.1",
+    "safari 14"
+  ]
+}
