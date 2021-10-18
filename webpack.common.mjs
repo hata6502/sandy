@@ -49,6 +49,9 @@ export default {
     new webpack.EnvironmentPlugin(["SENTRY_DSN"]),
   ],
   resolve: {
+    alias: {
+      "@mui/styled-engine": "@mui/styled-engine-sc",
+    },
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
 };
