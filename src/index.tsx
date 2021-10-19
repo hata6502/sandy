@@ -1,12 +1,12 @@
 import "core-js";
 import "regenerator-runtime";
 
-import {CssBaseline} from '@mui/material';
+import { CssBaseline } from "@mui/material";
 import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/tracing";
 import ReactDOM from "react-dom";
-import {App} from "./App";
-import {SandyThemeProvider} from "./SandyThemeProvider";
+import { App } from "./App";
+import { SandyThemeProvider } from "./SandyThemeProvider";
 
 if (process.env["NODE_ENV"] === "production") {
   Sentry.init({
@@ -42,7 +42,7 @@ ReactDOM.render(
   >
     <SandyThemeProvider>
       <CssBaseline />
-  		<App />
+      <App />
     </SandyThemeProvider>
   </Sentry.ErrorBoundary>,
   document.querySelector("#app")

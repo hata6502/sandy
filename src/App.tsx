@@ -6,14 +6,14 @@ import * as THREE from "three";
 
 const Camera: FunctionComponent = () => {
   useThree((three) => {
-    const ambientLight = new THREE.AmbientLight('#ffffff', 0.5)
+    const ambientLight = new THREE.AmbientLight("#ffffff", 0.5);
 
-    ambientLight.castShadow = true
+    ambientLight.castShadow = true;
     three.camera.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight('#ffffff', 0.5)
+    const directionalLight = new THREE.DirectionalLight("#ffffff", 0.5);
 
-    directionalLight.castShadow = true
+    directionalLight.castShadow = true;
     three.camera.add(directionalLight);
   });
 
