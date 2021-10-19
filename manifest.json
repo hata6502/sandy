@@ -1,0 +1,14 @@
+{
+  "name": "sandy",
+  "short_name": "sandy",
+  "description": "Voxel 3D modeling application on the web.",
+  "start_url": ".",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
