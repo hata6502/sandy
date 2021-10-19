@@ -3,18 +3,22 @@ import { Canvas, MeshProps, useThree } from "@react-three/fiber";
 import { GlobalStyles } from "@mui/material";
 import { FunctionComponent, useState } from "react";
 import * as THREE from "three";
+import {STLExporter} from "three/examples/jsm/exporters/STLExporter";
 
 const Camera: FunctionComponent = () => {
   useThree((three) => {
-    const ambientLight = new THREE.AmbientLight("#ffffff", 0.5);
+    const ambientLight = new THREE.AmbientLight("#ffffff", 0.125);
 
-    ambientLight.castShadow = true;
     three.camera.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight("#ffffff", 0.5);
+    const directionalLight = new THREE.DirectionalLight("#ffffff", 0.125);
 
     directionalLight.castShadow = true;
     three.camera.add(directionalLight);
+
+    const exporter = new STLExporter();
+
+    console.log(exporter.parse(three.scene));
   });
 
   return <PerspectiveCamera makeDefault position={[32, 32, 32]} />;
@@ -32,7 +36,7 @@ const Voxel: FunctionComponent<MeshProps> = (props) => {
       onPointerOut={() => setHover(false)}
     >
       <boxGeometry />
-      <meshStandardMaterial color={hovered ? "#ff00ff" : "#ffff00"} />
+      <meshStandardMaterial color={hovered ? "#ffff00" : "#ff0000"} />
     </mesh>
   );
 };
